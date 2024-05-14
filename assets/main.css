@@ -1,19 +1,49 @@
-/* Alles voor index.html begint met een I alles voor app.html begint met een A, alles voor de instellingen begint met een S. (alles wat vaker word gebruikt ZONDER de eerste letter maar vermeid een ven deze letters in het begin*/
+/* Alles voor index.html begint met een I alles voor app.html begint met een A, alles voor de instellingen begint met een S. (alles wat vaker word gebruikt ZONDER de eerste letter maar vermeid een ven deze letters in het begin
+hou rekening met de hoogte van de navbar met het maken van de hoogte van de verschillende grid systemen*/ 
+
+/*de verschillende Nav syles*/
 .nav{
     justify-content: space-evenly;
     border-bottom: 1px solid black;
-    
+    height: 3vh;
 }
 .navinlineblock{
     display: inline-block;
 }
+
+/* de grid voor de index pagina*/
+.Iwraper{
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+}
+.Iwraper2{
+
+    display: grid;
+}
+.I1{
+    grid-column: 1;
+    grid-row: 1;
+}
+.I2{
+    grid-column: 2;
+    grid-row: 1;
+    }
+.I3{
+    grid-column: 1;
+    grid-row: 1;
+}
+.I4{
+    grid-column: 1;
+    grid-row: 2;
+}
+/* de grid voor de app pagina*/
 .AAwraper{
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
 }
 .Awraper{
     display: grid;
-
 }
 .A1{
     grid-column: 1;
