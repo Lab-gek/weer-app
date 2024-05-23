@@ -9,9 +9,18 @@ buienradar.load(function () {
     buienradar.forecast.report.text('Voorspeltxt')
     buienradar.map('Neerslagimg')
     //dag info in variablen
-    const parent = document.getElementById()
     for (let i = 0; i < 5; i++) {
-        let tempmd${i} = document.getElementById(`tempmd${i}`)
+        // maak de variablen aan
+        tempmd[i] = document.getElementById('tempmd'+i);
+        //tempmd[i] = document.getElementById(`tempmx${i}`);
+        //rainch[i] = document.getElementById(`rainch${i}`);
+        //rainmmMin[i] = document.getElementById(`rainmmMin${i}`);
+        //rainmmMax[i] = document.getElementById(`rainmmMax${i}`);
+        //sunch[i] = document.getElementById(`sunch${i}`);
+        //winddir[i] = document.getElementById(`winddir${i}`);
+        //windspeed[i] = document.getElementById(`windspeed${i}`);
+        //icon[i] = document.getElementById(`icon${i}`);
+        //vul in de variablen
         buienradar.forecast.fiveDays.temperature.min(`tempmd${i}` , i)
         buienradar.forecast.fiveDays.temperature.max(`tempmx${i}` , i)
         buienradar.forecast.fiveDays.rain.chance(`rainch${i}` , i)
@@ -20,4 +29,7 @@ buienradar.load(function () {
         buienradar.forecast.fiveDays.sunChance(`sunch${i}` , i)    
         buienradar.forecast.fiveDays.wind.direction(`winddir${i}` , i)
         buienradar.forecast.fiveDays.wind.speed(`windspeed${i}` , i)
-        buienradar.forecast.fiveDays.icon(`icon${i}` , i)}})
+        buienradar.forecast.fiveDays.icon(`icon${i}` , i)
+    }
+}
+)
