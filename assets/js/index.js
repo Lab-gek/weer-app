@@ -12,8 +12,9 @@ buienradar.load(function () {
     buienradar.forecast.report.text('Voorspeltxt')
     buienradar.map('Neerslagimg')
     buienradar.currentLocation.icon('Weericonnav')
-    buienradar.buienradar.copyright('legal')
-    buienradar.sunrise('zonop')
+    buienradar.buienradar.copyright('legal');
+    buienradar.sunrise('zonop');
+    console.log(zonop)
     //dag info in variablen
     let tempmd = {};
     let rainmmMax = {};
