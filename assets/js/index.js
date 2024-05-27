@@ -23,26 +23,35 @@ buienradar.load(function () {
     let windspeed = {};
     let icon = {};
     
-    for(let i = 0; i < 5; i++) {
-        tempmd[`tempmd`+i] = buienradar.forecast.fiveDays.temperature.min(i);
-        document.getElementById(`tempmd`+i).innerText = tempmd[`tempmd`+i];
+    //for(let i = 0; i < 5; i++) {
+      //  tempmd[`tempmd`+i] = buienradar.forecast.fiveDays.temperature.min(i);
+        //document.getElementById(`tempmd`+i).innerText = tempmd[`tempmd`+i];
 
-        console.log(tempmd[`tempmd`+i]);
-        rainmmMax[`rainmmMax`+i] = buienradar.forecast.fiveDays.rain.mmMax(i);
-        document.getElementById(`rainmmMax`+i).innerText = rainmmMax[`rainmmMax`+i];
+       // console.log(tempmd[`tempmd`+i]);
+       // rainmmMax[`rainmmMax`+i] = buienradar.forecast.fiveDays.rain.mmMax(i);
+       // document.getElementById(`rainmmMax`+i).innerText = rainmmMax[`rainmmMax`+i];
     
-        sunch[`sunch`+i] = buienradar.forecast.fiveDays.sunchance(i);
-        document.getElementById(`sunch`+i).innerText = sunch[`sunch`+i];
+        //sunch[`sunch`+i] = buienradar.forecast.fiveDays.sunchance(i);
+        //document.getElementById(`sunch`+i).innerText = sunch[`sunch`+i];
     
-        winddir[`winddir`+i] = buienradar.forecast.fiveDays.wind.direction(i);
-        document.getElementById(`winddir`+i).innerText = winddir[`winddir`+i];
+        // winddir[`winddir`+i] = buienradar.forecast.fiveDays.wind.direction(i);
+     //   document.getElementById(`winddir`+i).innerText = winddir[`winddir`+i];
     
-        windspeed[`windspeed`+i] = buienradar.forecast.fiveDays.wind.speed(i);
-        document.getElementById(`windspeed`+i).innerText = windspeed[`windspeed`+i];
+      //  windspeed[`windspeed`+i] = buienradar.forecast.fiveDays.wind.speed(i);
+      //  document.getElementById(`windspeed`+i).innerText = windspeed[`windspeed`+i];
     
-        icon[`icon`+i] = buienradar.forecast.fiveDays.icon(i);
-        document.getElementById(`icon`+i).src = icon[`icon`+i];
+     //   icon[`icon`+i] = buienradar.forecast.fiveDays.icon(i);
+       // document.getElementById(`icon`+i).src = icon[`icon`+i];
+    //}
+    const parent = document.getElementById('fivedParrent') 
+  
+    for (let loop = 1; loop < 6; loop++) {
+            const rain =document.createElement('p') 
+            rain.innerText = `rain min ${buienradar.forecast.fiveDays.rain.mmMin(loop)} max ${buienradar.forecast.fiveDays.rain.mmMax(loop)}`
+            const temp = document.createElement('p') 
+            temp.innerText = `temp min ${buienradar.forecast.fiveDays.temperature.min(loop)} max ${buienradar.forecast.fiveDays.temperature.max(loop)}`
+            parent.appendChild(temp) 
+            parent.appendChild(rain)
     }
-    }
-,
+}
 )
