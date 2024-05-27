@@ -5,13 +5,36 @@ hou rekening met de hoogte van de navbar met het maken van de hoogte van de vers
 .nav{
     justify-content: space-evenly;
     border-bottom: 1px solid black;
-    height: 3vh;
+    height: 6vh;
 }
 .navinlineblock{
     display: inline-block;
 }
+/* TEST NAV COLLOR*/
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li{ 
+    float: left;
+}
+
+li a{
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
 
 /* de grid voor de index pagina*/
+li a:hover{
+    background-color: #111;
+}
 .Iwraper{
     width: 100vw;;
     display: grid;
@@ -34,7 +57,6 @@ hou rekening met de hoogte van de navbar met het maken van de hoogte van de vers
 .I3{
     grid-column: 1;
     grid-row: 1;
-    overflow: scroll;
 }
 .I4{
     grid-column: 1;
@@ -82,4 +104,9 @@ hou rekening met de hoogte van de navbar met het maken van de hoogte van de vers
 .A122{
     grid-column: 1;
     grid-row: 2;
+}
+/*de dark mode kleur*/
+.dark-mode{
+    background-color: #3e3e3e;
+    color: white;
 }

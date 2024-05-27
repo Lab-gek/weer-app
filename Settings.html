@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main.css">
 </head>
 <body>
-    
+    <nav class="nav">
+        <ul >
+            <li class="navinlineblock"> <a href="Index.html">Home pagina</a></li>
+            <li class="navinlineblock"> <a href="App.html">Weer van vandaag</a></li>
+            <li class="navinlineblock">placeholder</li>
+        </ul>
+    </nav>
+
+    <p>Dark-Mode</p>
+    <button onclick="DarkModeToggle()">Donkere Modus</button>
+    <script>
+        function DarkModeToggle() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
+        </script>
+        
 </body>
 </html>
