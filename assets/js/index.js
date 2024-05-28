@@ -16,42 +16,42 @@ buienradar.load(function () {
     buienradar.sunrise('zonop');
     console.log(zonop)
     //dag info in variablen
-    let tempmd = {};
-    let rainmmMax = {};
-    let sunch = {};
-    let winddir = {};
-    let windspeed = {};
-    let icon = {};
-    
-    //for(let i = 0; i < 5; i++) {
-      //  tempmd[`tempmd`+i] = buienradar.forecast.fiveDays.temperature.min(i);
-        //document.getElementById(`tempmd`+i).innerText = tempmd[`tempmd`+i];
-
-       // console.log(tempmd[`tempmd`+i]);
-       // rainmmMax[`rainmmMax`+i] = buienradar.forecast.fiveDays.rain.mmMax(i);
-       // document.getElementById(`rainmmMax`+i).innerText = rainmmMax[`rainmmMax`+i];
-    
-        //sunch[`sunch`+i] = buienradar.forecast.fiveDays.sunchance(i);
-        //document.getElementById(`sunch`+i).innerText = sunch[`sunch`+i];
-    
-        // winddir[`winddir`+i] = buienradar.forecast.fiveDays.wind.direction(i);
-     //   document.getElementById(`winddir`+i).innerText = winddir[`winddir`+i];
-    
-      //  windspeed[`windspeed`+i] = buienradar.forecast.fiveDays.wind.speed(i);
-      //  document.getElementById(`windspeed`+i).innerText = windspeed[`windspeed`+i];
-    
-     //   icon[`icon`+i] = buienradar.forecast.fiveDays.icon(i);
-       // document.getElementById(`icon`+i).src = icon[`icon`+i];
-    //}
     const parent = document.getElementById('fivedParrent') 
   
     for (let loop = 1; loop < 6; loop++) {
-            const rain =document.createElement('p') 
-            rain.innerText = `rain min ${buienradar.forecast.fiveDays.rain.mmMin(loop)} max ${buienradar.forecast.fiveDays.rain.mmMax(loop)}`
-            const temp = document.createElement('p') 
-            temp.innerText = `temp min ${buienradar.forecast.fiveDays.temperature.min(loop)} max ${buienradar.forecast.fiveDays.temperature.max(loop)}`
-            parent.appendChild(temp) 
-            parent.appendChild(rain)
+      const day  = document.createElement('h4')
+      day.innerText = `Dag ${loop}`
+
+      const rain =document.createElement('p') 
+      rain.innerText = `Rain min ${buienradar.forecast.fiveDays.rain.mmMin(loop)} max ${buienradar.forecast.fiveDays.rain.mmMax(loop)}`
+
+      const temp = document.createElement('p') 
+      temp.innerText = `Temp min ${buienradar.forecast.fiveDays.temperature.min(loop)} max ${buienradar.forecast.fiveDays.temperature.max(loop)}`
+
+      const wind = document.createElement('h5')
+      wind.innerText = 'Wind info'
+      const windsp = document.createElement('p')
+      windsp.innerText = ` snelheid ${buienradar.forecast.fiveDays.wind.speed(loop)} richting  ${buienradar.forecast.fiveDays.wind.direction(loop)}`
+      const winddir = document.createElement('p') 
+
+      const sun = document.createElement('p')
+      sun.innerText = `zon kans ${buienradar.forecast.fiveDays.sunChance(loop)} %`
+
+      const icon = document.createElement('img')
+      icon.src = buienradar.forecast.fiveDays.icon(loop)
+      parent.appendChild(day)
+
+      parent.appendChild(temp) 
+      parent.appendChild(rain)
+
+      parent.appendChild(wind)
+      parent.appendChild(windsp)
+      parent.appendChild(winddir)
+
+      parent.appendChild(sun)
+
+      parent.appendChild(icon)
+      
     }
 }
 )
