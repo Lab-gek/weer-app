@@ -5,6 +5,7 @@ Neerslagimg = document.getElementById('Neerslagimg');
 Weericonnav = document.getElementById('Weericonnav');
 legal= document.getElementById('legal');
 zonop = document.getElementById('zonop');
+zonon
 function celciusToFahrenheit(celcius) {
     return celcius * 9 / 5 + 32;
 }
@@ -15,8 +16,9 @@ buienradar.load(function () {
     buienradar.map('Neerslagimg')
     buienradar.currentLocation.icon('Weericonnav')
     buienradar.buienradar.copyright('legal');
-    buienradar.sunrise('zonop');
-    console.log(zonop)
+    buienradar.date.time('zonop', buienradar.sunrise());
+    buienradar.date.time('zonon', buienradar.sunset());
+    
     //dag info in variablen
     const parent = document.getElementById('fivedParrent')
 
