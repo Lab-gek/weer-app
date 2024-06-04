@@ -44,7 +44,7 @@ buienradar.load(function () {
         const rain = document.createElement('p');
         rain.innerText = `Rain min ${buienradar.forecast.fiveDays.rain.mmMin(loop)} max ${buienradar.forecast.fiveDays.rain.mmMax(loop)}`;
             
-        
+        //cookie reading
         const tempc = document.cookie
         .split("; ")
         .find((row) => row.startsWith("tempUnit="))
