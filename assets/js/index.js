@@ -6,6 +6,17 @@ Weericonnav = document.getElementById('Weericonnav');
 legal= document.getElementById('legal');
 zonop = document.getElementById('zonop');
 zonon
+
+window.onload = function darkMode(){
+    const mode = document.cookie.split("; ").find((row) => row.startsWith("darkMode="))?.split("=")[1];
+    if (mode === "enabled") {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+}
+
+
 function celciusToFahrenheit(celcius) {
     return celcius * 9 / 5 + 32;
 }
@@ -32,10 +43,20 @@ buienradar.load(function () {
 
         const rain = document.createElement('p');
         rain.innerText = `Rain min ${buienradar.forecast.fiveDays.rain.mmMin(loop)} max ${buienradar.forecast.fiveDays.rain.mmMax(loop)}`;
+            
+        
+        const tempc = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("tempUnit="))
+        ?.split("=")[1];
 
         const temp = document.createElement('p');
-        temp.innerText = `Temp min ${buienradar.forecast.fiveDays.temperature.min(loop)} max ${buienradar.forecast.fiveDays.temperature.max(loop)}`;
-
+        if (tempc === "Fahrenheit"){
+            6
+            temp.innerText = `Temp min ${celciusToFahrenheit(buienradar.forecast.fiveDays.temperature.min(loop))} max ${celciusToFahrenheit(buienradar.forecast.fiveDays.temperature.max(loop))}`;
+        } else{
+            temp.innerText = `Temp min ${buienradar.forecast.fiveDays.temperature.min(loop)} max ${buienradar.forecast.fiveDays.temperature.max(loop)}`;
+        }
         const wind = document.createElement('h5');
         wind.innerText = 'Wind info';
 

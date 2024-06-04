@@ -10,13 +10,13 @@ hou rekening met de hoogte van de navbar met het maken van de hoogte van de vers
 .navinlineblock{
     display: inline-block;
 }
-/* TEST NAV COLLOR*/
+/* Nav style */
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #1680b5;
 }
 
 li{ 
@@ -31,13 +31,17 @@ padding: 14px 16px;
 text-decoration: none;
 }
 
-/* de grid voor de index pagina*/
+/* de background collor voor de index pagina*/
 li a:hover{
-    background-color: #111;
+    background-color: #4d8aca;
 }
+
+/* Grid voor Index pagina */
+
 .Iwraper{
     width: 100vw;;
     display: grid;
+    scrollbar-width: none;
     
 }
 .Iwraper2{
@@ -57,10 +61,12 @@ li a:hover{
 .I3{
     grid-column: 1;
     grid-row: 1;
+    height: fit-content;
 }
 .I4{
     grid-column: 1;
-    grid-row: 2
+    grid-row: 2;
+    height: fit-content;
 }
 .I5{
     grid-column:1;
@@ -73,6 +79,7 @@ li a:hover{
 
 }
 .I
+
 /* de grid voor de app pagina*/
 .AAwraper{
     width: 100vw;
@@ -107,6 +114,38 @@ li a:hover{
 }
 /*de dark mode kleur*/
 .dark-mode{
-    background-color: #3e3e3e;
+    background-color: #152028;
     color: white;
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #16244d;
+    }
+    
+    li{ 
+        float: left;
+    }
+    
+    li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
 }
+
+/* Viewport voor devices */
+* {
+    box-sizing: border-box;
+}
+
+[class*=weerkaart] 
+{
+    width: 50%;
+    height: auto;
+    float: right;
+}
+

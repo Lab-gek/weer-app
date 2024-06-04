@@ -16,17 +16,17 @@
     </nav>
 
     <p>Dark-Mode</p>
-    <button onclick="DarkModeToggle()">Donkere Modus</button>
+    <button id="toggle-mode" onclick="DarkModeToggle(), DarkmMode()">Donkere Modus</button>
     <p>tempratuur</p>
     <select name="Tempratuur selectie" id="temp" onchange="tempselc()">
         <option value="Celsius">Celsius</option>
         <option value="Fahrenheit" >Fahrenheit</option>
     </select>
     <script>
-        function DarkModeToggle() {
-           var element = document.body;
-           element.classList.toggle("dark-mode");
-        }
+        //function DarkModeToggle() {
+          // var element = document.body;
+          //element.classList.toggle("dark-mode");
+        //}
         </script>
 
 
