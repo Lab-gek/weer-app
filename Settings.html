@@ -9,27 +9,22 @@
 <body>
     <nav class="nav">
         <ul >
-            <li class="navinlineblock"> <a href="Index.html">Home pagina</a></li>
+            <li class="navinlineblock"> <a href="index.html">Home pagina</a></li>
             <li class="navinlineblock"> <a href="App.html">Weer van vandaag</a></li>
             <li class="navinlineblock">placeholder</li>
         </ul>
     </nav>
 
     <p>Dark-Mode</p>
-    <button id="toggle-mode" onclick="DarkModeToggle(), DarkmMode()">Donkere Modus</button>
-    <p>tempratuur</p>
+    <button id="toggle-mode">Donkere Modus</button>
+    <p>Tempratuur</p>
     <select name="Tempratuur selectie" id="temp" onchange="tempselc()">
         <option value="Celsius">Celsius</option>
         <option value="Fahrenheit" >Fahrenheit</option>
     </select>
-    <script>
-        //function DarkModeToggle() {
-          // var element = document.body;
-          //element.classList.toggle("dark-mode");
-        //}
-        </script>
 
 
 <script src="assets/js/settings.js"></script>
+<script src="assets/js/darkmode.js"></script>
 </body>
 </html>

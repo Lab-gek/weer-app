@@ -8,20 +8,4 @@
          document.cookie = "tempUnit=Fahrenheit; path=/";
      }
  }
- 
- let darkMode = false; 
 
- function DarkmMode() {
-     darkMode = !darkMode; 
- 
-     if (darkMode) {
-         document.body.classList.add('dark-mode'); 
-         document.cookie = "darkMode=enabled; path=/";
-     } else {
-         document.body.classList.remove('dark-mode'); 
-         document.cookie = "darkMode=disabled; path=/"
-     }
- }
- 
-
- document.getElementById('toggle-mode').addEventListener('click', DarkmMode);
