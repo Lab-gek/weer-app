@@ -27,7 +27,7 @@ buienradar.load(function () {
         divi.classList.add(`Idag${loop}`);
 
         const day  = document.createElement('h4');
-        day.innerText = `voor dag ${buienradar.forecast.fivedays.day(loop)}`;
+        day.innerText = `Weer voor ${ buienradar.date.name(buienradar.forecast.fiveDays.date(loop))}`;
 
         const rain = document.createElement('p');
         rain.innerText = `Rain min ${buienradar.forecast.fiveDays.rain.mmMin(loop)} max ${buienradar.forecast.fiveDays.rain.mmMax(loop)}`;

@@ -27,7 +27,7 @@ function DarkmMode() {
         modec()
     } else {
         document.body.classList.remove('dark-mode');
-        document.cookie = "darkMode=disabled; path=/"
+		document.cookie = "darkMode=disabled; path=/"
     }
 }
 
