@@ -1,6 +1,30 @@
 /* Alles voor index.html begint met een I alles voor app.html begint met een A, alles voor de instellingen begint met een S. (alles wat vaker word gebruikt ZONDER de eerste letter maar vermeid een ven deze letters in het begin
-hou rekening met de hoogte van de navbar met het maken van de hoogte van de verschillende grid systemen*/ 
+hou rekening met de hoogte van de navbar met het maken van de hoogte van de verschillende grid systemen*/
+/*de dark mode kleur overall*/
+.dark-mode{
 
+    background-color: #152028;
+    color: white;
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #16244d !important;
+    }
+
+    li{
+        float: left;
+    }
+
+    li a{
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+}
 /*de verschillende Nav syles*/
 .nav{
     justify-content: space-evenly;
@@ -126,31 +150,7 @@ li a:hover{
     Float: right; 
 }
 
-/*de dark mode kleur overall*/
-.dark-mode{
-    
-    background-color: #152028;
-    color: white;
-    ul{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #16244d;
-    }
-    
-    li{ 
-        float: left;
-    }
-    
-    li a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    }
-}
+
 
 /* Viewport voor devices */
 * {

@@ -2,8 +2,10 @@ window.onload = function modec(){
     const mode = document.cookie.split("; ").find((row) => row.startsWith("darkMode="))?.split("=")[1];
     if (mode === "enabled") {
         document.body.classList.add('dark-mode');
+        console.log('aan')
     } else {
         document.body.classList.remove('dark-mode');
+        console.log('uit')
     }
 }
 
@@ -29,6 +31,7 @@ function DarkmMode() {
         document.cookie = "darkMode=enabled; path=/";
         console.log('cookie t')
         modec()
+
         
     } else {
         document.body.classList.remove('dark-mode');
@@ -36,4 +39,12 @@ function DarkmMode() {
         console.log('cookie f')
     }
 }
-document.getElementById('toggle-mode').addEventListener('click', DarkmMode)
+function Darmalert(){
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        alert('Je hebt Darkmode aanstaan in je browser instellingen zet deze uit om de website in light mode te zien :)')
+    }
+
+
+
+}
+document.getElementById('toggle-mode').addEventListener('click',Darmalert, DarkmMode)
