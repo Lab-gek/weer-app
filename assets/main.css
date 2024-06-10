@@ -9,6 +9,11 @@ hou rekening met de hoogte van de navbar met het maken van de hoogte van de vers
 }
 .navinlineblock{
     display: inline-block;
+    
+}
+/* Icoon Nav midden */
+.Ni{
+    padding-top: 0.75%;
 }
 /* Nav style */
 ul{
@@ -41,17 +46,17 @@ li a:hover{
 .Iwraper{
     width: 100vw;;
     display: grid;
-    scrollbar-width: none;
+
     
 }
-.Iwraper2{
 
-    display: grid;
-}
 .I1{
     grid-column: 1;
     grid-row: 1;
-    width: 49vw;
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+
 }
 .I2{
     grid-column: 2;
@@ -67,6 +72,7 @@ li a:hover{
     grid-column: 1;
     grid-row: 2;
     height: fit-content;
+    width: 50%;
 }
 .I5{
     grid-column:1;
@@ -81,39 +87,48 @@ li a:hover{
 .I
 
 /* de grid voor de app pagina*/
-.AAwraper{
-    width: 100vw;
-    height: 90vh;
-}
-.Awraper{
-    display: grid;
-}
-.A1{
-    grid-column: 1;
-    grid-row: 1;
-}
-.A2{
-    grid-column: 1;
-    grid-row: 2;
-} 
-.a11{
-    grid-column : 1;
+.Aa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
 
 }
-.A12{
-    grid-column: 2;
-    grid-row: 1;
+.Alines{
+    border: black solid 1px;
+    max-width: 20%;
+    align-items: center;
+
 }
-.A121{
-    grid-column: 1;
-    grid-row: 1;
+.Aa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5%;
 }
-.A122{
-    grid-column: 1;
-    grid-row: 2;
+
+.Aa > div {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #4f86d8;
+    border-radius: 5px;
+    background-color: #35b0ee3d;
 }
-/*de dark mode kleur*/
+
+
+/* I Aanpassen zontijd */
+.zt {
+    Float: right; 
+}
+
+/*de dark mode kleur overall*/
 .dark-mode{
+    
     background-color: #152028;
     color: white;
     ul{
@@ -141,11 +156,12 @@ li a:hover{
 * {
     box-sizing: border-box;
 }
-
-[class*=weerkaart] 
+/* I weerkaart */
+.weerkaart 
 {
-    width: 50%;
+    width: 25%;
     height: auto;
     float: right;
+    padding-right: 1.5%;
 }
-
+/*test*/
