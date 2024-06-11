@@ -1,4 +1,5 @@
  function tempselc(){
+    console.log('temp')
      let tempSelect = document.getElementById('temp');
      let selectedValue = tempSelect.options[tempSelect.selectedIndex].value;
 

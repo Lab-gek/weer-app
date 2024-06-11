@@ -31,7 +31,7 @@ buienradar.load(function () {
         windsp.innerText = `Wind snelheid ${buienradar.forecast.fiveDays.wind.speed(loop)} richting  ${buienradar.forecast.fiveDays.wind.direction(loop)}`;
 
         const sun = document.createElement('p');
-        sun.innerText = `zonne kans ${buienradar.forecast.fiveDays.sunChance(loop)}%`;
+        sun.innerText = `Zonnen kans ${buienradar.forecast.fiveDays.sunChance(loop)}%`;
 
         const icon = document.createElement('img');
         icon.src = buienradar.forecast.fiveDays.icon(loop);
@@ -41,10 +41,8 @@ buienradar.load(function () {
         divi.appendChild(rain);
         divi.appendChild(sun);
         divi.appendChild(windsp);
-   
         divi.appendChild(icon);
-
-        // Append the divi to the parent
+    
         parent.appendChild(divi);
     }
 }
@@ -52,3 +50,4 @@ buienradar.load(function () {
 function  celciusToFahrenheit(celcius) {
     return celcius *9 /5 +32;
 }
+

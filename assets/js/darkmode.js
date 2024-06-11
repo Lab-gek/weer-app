@@ -28,6 +28,7 @@ function DarkmMode() {
 
     if (window.matchMedia('(prefers-color-scheme: dark)').matches || !darkMode) {
         document.body.classList.add('dark-mode');
+        darkmode = true
         document.cookie = "darkMode=enabled; path=/";
         console.log('cookie t')
         modec()
@@ -40,11 +41,22 @@ function DarkmMode() {
     }
 }
 function Darmalert(){
+    console.log('alert')
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         alert('Je hebt Darkmode aanstaan in je browser instellingen zet deze uit om de website in light mode te zien :)')
+        console.log('aan')
     }
 
 
 
 }
+
+
+// de Buienradar code in de darkmode.js omdat deze overal word geladen 
+zonop = document.getElementById('zonop');
+buienradar.load(function(){
+    buienradar.date.time('zonop', buienradar.sunrise());
+    buienradar.date.time('zonon', buienradar.sunset());
+}
+)
 document.getElementById('toggle-mode').addEventListener('click',Darmalert, DarkmMode)
