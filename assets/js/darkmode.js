@@ -1,62 +1,48 @@
-window.onload = function modec(){
-    const mode = document.cookie.split("; ").find((row) => row.startsWith("darkMode="))?.split("=")[1];
-    if (mode === "enabled") {
-        document.body.classList.add('dark-mode');
-        console.log('aan')
-    } else {
-        document.body.classList.remove('dark-mode');
-        console.log('uit')
+// de Buienradar code in de darkmode.js omdat deze overal word geladen
+zonop = document.getElementById('zonop');
+Weericonnav = document.getElementById('Weericonnav');
+buienradar.load(function(){
+        buienradar.date.time('zonop', buienradar.sunrise());
+        buienradar.date.time('zonon', buienradar.sunset());
+        buienradar.currentLocation.icon('Weericonnav')
     }
-}
+)
 
 function modec(){
     const mode = document.cookie.split("; ").find((row) => row.startsWith("darkMode="))?.split("=")[1];
     if (mode === "enabled") {
-        console.log('cookie q')
         document.body.classList.add('dark-mode');
-  
+        console.log('aan')
+    } else if (mode === "disabled") {
+        document.body.classList.remove('dark-mode');
+        console.log('uit')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark-mode');
+        document.cookie = "darkMode=enabled; path=/";
+        console.log('cookie t78')
     } else {
         document.body.classList.remove('dark-mode');
-        console.log('cookie w')
+        document.cookie = "darkMode=disabled; path=/"
+        console.log('cookie f86')
     }
 }
-
-let darkMode = false;
+window.onload = modec;
+let darkMode = true;
 
 function DarkmMode() {
     darkMode = !darkMode;
 
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches || !darkMode) {
+    if (!darkMode) {
         document.body.classList.add('dark-mode');
-        darkmode = true
         document.cookie = "darkMode=enabled; path=/";
         console.log('cookie t')
         modec()
-
-        
     } else {
         document.body.classList.remove('dark-mode');
-		document.cookie = "darkMode=disabled; path=/"
+        document.cookie = "darkMode=disabled; path=/"
         console.log('cookie f')
     }
 }
-function Darmalert(){
-    console.log('alert')
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        alert('Je hebt Darkmode aanstaan in je browser instellingen zet deze uit om de website in light mode te zien :)')
-        console.log('aan')
-    }
 
+document.getElementById('toggle-mode').addEventListener('click', DarkmMode)
 
-
-}
-
-
-// de Buienradar code in de darkmode.js omdat deze overal word geladen 
-zonop = document.getElementById('zonop');
-buienradar.load(function(){
-    buienradar.date.time('zonop', buienradar.sunrise());
-    buienradar.date.time('zonon', buienradar.sunset());
-}
-)
-document.getElementById('toggle-mode').addEventListener('click',Darmalert, DarkmMode)

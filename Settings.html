@@ -7,23 +7,29 @@
     <link rel="stylesheet" type="text/css" href="/assets/main.css">
 </head>
 <body>
-    <nav class="nav">
-        <ul >
-            <li class="navinlineblock"> <a href="index.html">Home pagina</a></li>
-            <li class="navinlineblock"> <a href="App.html">Weer van de week</a></li>
-            <li class="navinlineblock">placeholder</li>
-        </ul>
-    </nav>
+<nav class="nav">
+    <ul >
+        <li class="navinlineblock Ni"><img id="Weericonnav" alt="weericoon"> <li>
+        <li class="navinlineblock"> <a href="index.html">Homepage</a></li>
+        <li class="navinlineblock"> <a href="App.html">Weer van de week</a></li>
+        <li class="navinlineblock Zt"> <p>&nbsp Zon op &nbsp </p> </li>
+        <li class="navinlineblock Zt"> <p id="zonop"></p> </li>
+        <li class="navinlineblock Zt"> <p>&nbsp &nbsp Zon onder &nbsp </p> </li>
+        <li class="navinlineblock Zt"> <p id="zonon"></p> </li>
+    </ul>
+</nav>
 
     <p>Dark-Mode</p>
     <button id="toggle-mode">Donkere Modus</button>
     <p>Tempratuur</p>
-    <label id="temp" class="Sswitch"onchange="tempselc()">
-        <input id="temp" type="checkbox">
-        <span class="slider" id="toggle-mode"></span>
-    </label>
+    <form id="temp" onchange="tempselc()">
+        <input type="radio" id="Celsius" name="temprature" value="Celsius" checked>
+        <label for="Celsius">Celsius</label><br>
+        <input type="radio" id="Fahrenheit" name="temprature" value="Fahrenheit">
+        <label for="Fahrenheit">Fahrenheit</label>
+    </form>
 
-
+<script src="https://cdn.jsdelivr.net/npm/@uitgeverij-instruct/buienradar@1" ></script>
 <script src="assets/js/settings.js"></script>
 <script src="assets/js/darkmode.js"></script>
 <script>
