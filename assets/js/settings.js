@@ -6,4 +6,30 @@ function tempselc() {
         document.cookie = `tempUnit=${selectedValue}; path=/`;
     }
 }
+document.querySelector('form').addEventListener('submit', function(event){
+    event.preventDefault();
+    contact();
+});
+function contact(){
+    var title = document.getElementById("Question").value
+    var beschrijving = document.getElementById("Beschrijving").value
+    var baseurl = 'https://github.com/octo-org/octo-repo/issues/new?'
+    var link = baseurl + "title=" + title + "&body=" + beschrijving
+    console.log(link)
+    window.open(link, '_blank')
+}
 
+
+function githubic(){ 
+    setTimeout(210)
+    console.log('test')
+    const darkm = document.cookie.split("; ").find((row) =>row.startsWith("darkMode"))?.split("=")[1];
+    if(darkm ==="enabled"){
+        document.getElementById("githubic").src = 'assets/icons/github-light.svg'
+        console.log("dark")
+    } else {
+        document.getElementById("githubic").src = 'assets/icons/github-dark.svg'
+        console.log("light")
+    }
+}
+window.load = githubic()

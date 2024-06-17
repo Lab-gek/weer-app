@@ -12,6 +12,7 @@
         <li class="navinlineblock Ni"><img id="Weericonnav" alt="weericoon"> <li>
         <li class="navinlineblock"> <a href="index.html">Homepage</a></li>
         <li class="navinlineblock"> <a href="App.html">Weer van de week</a></li>
+        <li class="navinlineblock"> <a href="Settings.html">Instellingen</a></li>
         <li class="navinlineblock Zt"> <p>&nbsp Zon op &nbsp </p> </li>
         <li class="navinlineblock Zt"> <p id="zonop"></p> </li>
         <li class="navinlineblock Zt"> <p>&nbsp &nbsp Zon onder &nbsp </p> </li>
@@ -19,19 +20,32 @@
     </ul>
 </nav>
 
-    <p>Dark-Mode</p>
+    <h1>Instellingen</h1>
+    <p>Dark-mode</p>
     <button id="toggle-mode">Donkere Modus</button>
-    <p>Tempratuur</p>
+    <p>Temperatuur</p>
     <form id="temp" onchange="tempselc()">
         <input type="radio" id="Celsius" name="temprature" value="Celsius" checked>
         <label for="Celsius">Celsius</label><br>
         <input type="radio" id="Fahrenheit" name="temprature" value="Fahrenheit">
         <label for="Fahrenheit">Fahrenheit</label>
     </form>
+    <p> </p>
 
+
+<h1>Hulp & Contact</h1>
+<form autocomplete="on">
+    <label>Samenvatting van vraag</label><br>
+    <input type="text" id="Question" name="Vraag"><br>
+    <label for="Beschrijving">Beschrijving</label><br>
+    <input type="text" id="Beschrijving" name="Beschrijving">
+    <input type="submit" value="Versturen">
+</form>
+<img class="Sgithub" id="githubic" alt="github image"></img>
 <script src="https://cdn.jsdelivr.net/npm/@uitgeverij-instruct/buienradar@1" ></script>
-<script src="assets/js/settings.js"></script>
+
 <script src="assets/js/darkmode.js"></script>
+<script src="assets/js/settings.js"></script>
 <script>
 </script>
 </body>

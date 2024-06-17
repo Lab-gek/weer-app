@@ -11,7 +11,7 @@ buienradar.load(function () {
         day.innerText = `Weer voor ${ buienradar.date.name(buienradar.forecast.fiveDays.date(loop))}`;
 
         const rain = document.createElement('p');
-        rain.innerText = `Regen min ${buienradar.forecast.fiveDays.rain.mmMin(loop)}mm max ${buienradar.forecast.fiveDays.rain.mmMax(loop)}mm`;
+        rain.innerText = `Regen min ${buienradar.forecast.fiveDays.rain.mmMin(loop)} mm max ${buienradar.forecast.fiveDays.rain.mmMax(loop)} mm`;
 
         //cookie reading
         const tempc = document.cookie
@@ -22,7 +22,7 @@ buienradar.load(function () {
         const temp = document.createElement('p');
         if (tempc === "Fahrenheit"){
 
-            temp.innerText = `Temp min ${celciusToFahrenheit(buienradar.forecast.fiveDays.temperature.min(loop))}°F max ${celciusToFahrenheit(buienradar.forecast.fiveDays.temperature.max(loop))}°F`;
+            temp.innerText = `Temp min ${celciusToFahrenheit(buienradar.forecast.fiveDays.temperature.min(loop))} °F max ${celciusToFahrenheit(buienradar.forecast.fiveDays.temperature.max(loop))}°F`;
         } else{
             temp.innerText = `Temp min ${buienradar.forecast.fiveDays.temperature.min(loop)}°C max ${buienradar.forecast.fiveDays.temperature.max(loop)}°C`;
         }

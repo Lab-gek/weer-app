@@ -60,9 +60,24 @@ padding: 14px 16px;
 text-decoration: none;
 }
 
-/* de background collor voor de index pagina*/
+/* de background color voor de index pagina*/
 li a:hover{
     background-color: #4d8aca;
+}
+
+/*grid voor de instellingen pagina */
+
+.Swraper{
+    width: 100vw;;
+    display: grid;
+}
+
+.S1{
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 /* Grid voor Index pagina */
