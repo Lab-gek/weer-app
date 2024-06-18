@@ -6,14 +6,14 @@ function tempselc() {
         document.cookie = `tempUnit=${selectedValue}; path=/`;
     }
 }
-document.querySelector('form').addEventListener('submit', function(event){
-    event.preventDefault();
-    contact();
-});
+
+
+
 function contact(){
+    console.log('test')
     var title = document.getElementById("Question").value
     var beschrijving = document.getElementById("Beschrijving").value
-    var baseurl = 'https://github.com/octo-org/octo-repo/issues/new?'
+    var baseurl = 'https://github.com/skelter-studio-s/weer-app/issues/new?'
     var link = baseurl + "title=" + title + "&body=" + beschrijving
     console.log(link)
     window.open(link, '_blank')
