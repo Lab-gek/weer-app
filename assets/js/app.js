@@ -2,6 +2,7 @@ buienradar.load(function () {
     const parent = document.getElementById('fivedParrent')
 
     for (let loop = 1; loop < 6; loop++) {
+    
         const divi = document.createElement('div');
         // Hier mee kan je de verschillende dagen in css met Idag[dag] een nieuwe posite geven als nodig is
         divi.classList.add(`Adag${loop}`);
@@ -31,7 +32,7 @@ buienradar.load(function () {
         windsp.innerText = `Wind snelheid ${buienradar.forecast.fiveDays.wind.speed(loop)} richting  ${buienradar.forecast.fiveDays.wind.direction(loop)}`;
 
         const sun = document.createElement('p');
-        sun.innerText = `Zonnen kans ${buienradar.forecast.fiveDays.sunChance(loop)}%`;
+        sun.innerText = `Kans op zon ${buienradar.forecast.fiveDays.sunChance(loop)}%`;
 
         const icon = document.createElement('img');
         icon.src = buienradar.forecast.fiveDays.icon(loop);
